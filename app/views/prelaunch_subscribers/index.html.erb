@@ -1,0 +1,33 @@
+<h1>Listing prelaunch_subscribers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Portfolio</th>
+    <th>Birthdate</th>
+    <th>Location</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @prelaunch_subscribers.each do |prelaunch_subscriber| %>
+  <tr>
+    <td><%= prelaunch_subscriber.name %></td>
+    <td><%= prelaunch_subscriber.email %></td>
+    <td><%= prelaunch_subscriber.phone %></td>
+    <td><%= prelaunch_subscriber.portfolio %></td>
+    <td><%= prelaunch_subscriber.birthdate %></td>
+    <td><%= prelaunch_subscriber.location %></td>
+    <td><%= link_to 'Show', prelaunch_subscriber %></td>
+    <td><%= link_to 'Edit', edit_prelaunch_subscriber_path(prelaunch_subscriber) %></td>
+    <td><%= link_to 'Destroy', prelaunch_subscriber, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Prelaunch subscriber', new_prelaunch_subscriber_path %>

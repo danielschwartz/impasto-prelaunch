@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ImpastoPrelaunch</title>
+  <%= stylesheet_link_tag    "reset", :media => "all" %>
+  <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+  <%= stylesheet_link_tag    "prelaunch", :media => "all" %>
+
+  <script type="text/javascript">
+    WebFontConfig = {
+      typekit: { id:'kab7drn'}
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js "></script>
+  <%= javascript_include_tag "prelaunch" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

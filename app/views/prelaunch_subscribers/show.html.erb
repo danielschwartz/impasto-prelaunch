@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @prelaunch_subscriber.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @prelaunch_subscriber.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @prelaunch_subscriber.phone %>
+</p>
+
+<p>
+  <b>Portfolio:</b>
+  <%= @prelaunch_subscriber.portfolio %>
+</p>
+
+<p>
+  <b>Birthdate:</b>
+  <%= @prelaunch_subscriber.birthdate %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @prelaunch_subscriber.location %>
+</p>
+
+
+<%= link_to 'Edit', edit_prelaunch_subscriber_path(@prelaunch_subscriber) %> |
+<%= link_to 'Back', prelaunch_subscribers_path %>

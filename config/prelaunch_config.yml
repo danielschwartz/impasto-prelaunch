@@ -1,0 +1,15 @@
+development:
+  campaign_monitor_api_key: 0b16d196da5d0f3e532fb16a5e94d98d
+  campaign_monitor_artist_list_id: f2c3483e232dfff0cc48b2471b3be114
+  campaign_monitor_user_list_id: 54d49bfe508f8a71302b9c6a5b4e47ac
+  
+test:
+  campaign_monitor_api_key: 0b16d196da5d0f3e532fb16a5e94d98d
+  campaign_monitor_artist_list_id: f2c3483e232dfff0cc48b2471b3be114
+  campaign_monitor_user_list_id: 54d49bfe508f8a71302b9c6a5b4e47ac
+
+production:
+  campaign_monitor_api_key: 0b16d196da5d0f3e532fb16a5e94d98d
+  campaign_monitor_artist_list_id: f2c3483e232dfff0cc48b2471b3be114
+  campaign_monitor_user_list_id: 54d49bfe508f8a71302b9c6a5b4e47ac
+  

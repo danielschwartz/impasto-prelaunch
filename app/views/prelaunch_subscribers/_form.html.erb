@@ -1,0 +1,41 @@
+<%= form_for(@prelaunch_subscriber) do |f| %>
+  <% if @prelaunch_subscriber.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prelaunch_subscriber.errors.count, "error") %> prohibited this prelaunch_subscriber from being saved:</h2>
+
+      <ul>
+      <% @prelaunch_subscriber.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :portfolio %><br />
+    <%= f.text_field :portfolio %>
+  </div>
+  <div class="field">
+    <%= f.label :birthdate %><br />
+    <%= f.date_select :birthdate %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,64 @@
+<div class="panel" id="panel">
+	<div class="persistent">
+		<h1 class="lobster">Impasto</h1>
+		<h2 class="rooney">Get the most out of your search for the perfect piece</h2>
+		<p class="chap desc">Impasto is a community of like-minded art enthusiats. We enjoy the finer things in life. We like to look at art. Smoke cigars. Wave money around. There are both artists and consumers in this community. But they all like art.</p>
+	</div>
+
+	<div class="intro clearfix" id="intro-box">
+		<h3 class="rooney">I'm an</h3>
+		<div class="buttons">
+			<a id="artist-button" class="btn btn-inverse lobster">Artist</a>
+			<a id="user-button" class="btn btn-inverse lobster">User</a>
+		</div>
+	</div>
+
+	<div class="share" id="share-box">
+		<h3 class="rooney">Thanks! <br> We'll let you know as soon we're open.</h3>
+	</div>
+
+	<div class="artist" id="artist-box">
+		<h3 class="rooney">Enter your Information</h3>
+		<%= form_for @prelaunch_subscriber, :url => { :action => "create" } do |f| %>
+			<%= label(:prelaunch_subscriber, :email, "Email (required)") %>
+			<%= f.text_field :email, :class => "span4", :placeholder => "ex. name@exmaple.com" %>
+			<br>
+			<%= f.label :name, :class => "chap" %>
+			<%= f.text_field :name, :class => "span4", :placeholder => "ex. John Smith" %>
+
+			<br>
+			<%= f.label :phone, :class => "chap" %>
+			<%= f.text_field :phone, :class => "span4", :placeholder => "ex. (212)-555-1212" %>
+
+			<br>
+			<%= f.label :portfolio, :class => "chap" %>
+			<%= f.text_field :portfolio, :class => "span4", :placeholder => "ex. http://www.example.com/" %>
+
+			<br>
+			<%= f.label :location, :class => "chap" %>
+			<%= f.text_field :location, :class => "span4", :placeholder => "ex. New York, NY" %>
+
+			<br>
+			<%= f.label :birthdate %>
+
+			<div class="dates">
+				<%= date_select("prelaunch_subscriber", "birthdate", :order => [:month, :day, :year]) %>
+			</div>
+
+			<%= f.hidden_field :artist, :value => 1 %>
+			<button class="btn btn-success lobster" type="submit">Sign Up</button>
+		<% end %>
+	</div>
+
+	<div class="user" id="user-box">
+		<h3 class="rooney">Enter Email</h3>
+		<%= form_for @prelaunch_subscriber, :url => { :action => "create" } do |f| %>
+			<div class="input-append">
+				<%= f.text_field :email, :class => "span4", :placeholder => "ex. name@exmaple.com" %>
+				<button type="submit" class="btn btn-success">Go</button>
+			</div>
+
+			<%= f.hidden_field :artist, :value => 0 %>
+		<% end %>
+	</div>
+</div>
