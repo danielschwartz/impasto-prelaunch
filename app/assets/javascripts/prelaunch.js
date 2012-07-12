@@ -131,8 +131,6 @@ $(document).ready(function(){
         e.preventDefault();
 
         introBox.fadeOut(500, function(){
-
-
             userBox.fadeIn(500);
         });
     });

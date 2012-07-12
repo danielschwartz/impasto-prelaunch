@@ -14,6 +14,24 @@ ActiveAdmin::Dashboards.build do
   #       end
   #     end
   #   end
+
+  section "Recent Artists" do 
+    table_for PrelaunchSubscriber.where(:artist => true) do
+      column ("Email") { |sub| link_to(sub.email, admin_prelaunch_subscriber_path(sub)) }
+      column ("Name") { |sub|  sub.name }
+      column ("Portfolio") { |sub| sub.portfolio }
+      column ("Location") { |sub| sub.location }
+      column ("Time") { |sub|  sub.created_at }
+    end
+  end
+
+  section "Recent Collectors" do 
+    table_for PrelaunchSubscriber.where(:artist => true) do
+      column ("Email") { |sub| link_to(sub.email, admin_prelaunch_subscriber_path(sub)) }
+      column ("Name") { |sub|  sub.name }
+      column ("Time") { |sub|  sub.created_at }
+    end
+  end
   
   # == Render Partial Section
   # The block is rendered within the context of the view, so you can
