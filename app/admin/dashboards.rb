@@ -26,7 +26,7 @@ ActiveAdmin::Dashboards.build do
   end
 
   section "Recent Collectors" do 
-    table_for PrelaunchSubscriber.where(:artist => true) do
+    table_for PrelaunchSubscriber.where(:artist => false) do
       column ("Email") { |sub| link_to(sub.email, admin_prelaunch_subscriber_path(sub)) }
       column ("Name") { |sub|  sub.name }
       column ("Time") { |sub|  sub.created_at }
