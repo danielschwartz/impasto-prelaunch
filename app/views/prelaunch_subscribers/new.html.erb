@@ -42,7 +42,7 @@
 			<%= f.label :birthdate %>
 
 			<div class="dates">
-				<%= date_select("prelaunch_subscriber", "birthdate", :order => [:month, :day, :year]) %>
+				<%= f.date_select :birthdate, :order => [:month, :day, :year], :start_year => 1900, :end_year => 2012 %>
 			</div>
 
 			<%= f.hidden_field :artist, :value => 1 %>

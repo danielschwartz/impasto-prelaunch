@@ -110,7 +110,13 @@ $(document).ready(function(){
     artistForm.submit(function(e){
         e.preventDefault();
 
-        $.post($(this).attr('action') + '.json', $(this).toJSON(), function(json){
+        var form = $(this).toJSON();
+
+        form.prelaunch_subscriber['birthdate(1i)'] = $('#prelaunch_subscriber_birthdate_1i').val();
+        form.prelaunch_subscriber['birthdate(2i)'] = $('#prelaunch_subscriber_birthdate_2i').val();
+        form.prelaunch_subscriber['birthdate(3i)'] = $('#prelaunch_subscriber_birthdate_3i').val();
+
+        $.post($(this).attr('action') + '.json', form, function(json){
             if(json.success){
                 showShare(true);
             } else {

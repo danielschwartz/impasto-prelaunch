@@ -38,11 +38,11 @@ class DeviseCreateAdminUsers < ActiveRecord::Migration
     end
 
     # Create a default user
-    AdminUser.create!(:email => 'tech@impas.to', :password => '!mp@st0', :password_confirmation => '!mp@st0');
-    AdminUser.create!(:email => 'daniel@impas.to', :password => '!mp@st0', :password_confirmation => '!mp@st0');
-    AdminUser.create!(:email => 'taleeb@impas.to', :password => '!mp@st0', :password_confirmation => '!mp@st0');
-    AdminUser.create!(:email => 'derek@impas.to', :password => '!mp@st0', :password_confirmation => '!mp@st0');
-    AdminUser.create!(:email => 'anthony@impas.to', :password => '!mp@st0', :password_confirmation => '!mp@st0');
+    # AdminUser.create!(:email => 'tech@impas.to', :password => '!mp@st0', :password_confirmation => '!mp@st0');
+    # AdminUser.create!(:email => 'daniel@impas.to', :password => '!mp@st0', :password_confirmation => '!mp@st0');
+    # AdminUser.create!(:email => 'taleeb@impas.to', :password => '!mp@st0', :password_confirmation => '!mp@st0');
+    # AdminUser.create!(:email => 'derek@impas.to', :password => '!mp@st0', :password_confirmation => '!mp@st0');
+    # AdminUser.create!(:email => 'anthony@impas.to', :password => '!mp@st0', :password_confirmation => '!mp@st0');
 
     add_index :admin_users, :email,                :unique => true
     add_index :admin_users, :reset_password_token, :unique => true

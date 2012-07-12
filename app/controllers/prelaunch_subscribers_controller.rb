@@ -41,6 +41,8 @@ class PrelaunchSubscribersController < ApplicationController
   def create
     @prelaunch_subscriber = PrelaunchSubscriber.new(params[:prelaunch_subscriber])
 
+    logger.debug "#{params[:prelaunch_subscriber]}"
+
     respond_to do |format|
       if @prelaunch_subscriber.save
         format.html { redirect_to root_url }

@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Emanuel', :city => cities.first)
+
+AdminUser.create(:email => 'tech@impas.to', :password => '!mp@st0', :password_confirmation => '!mp@st0');
+AdminUser.create(:email => 'daniel@impas.to', :password => '!mp@st0', :password_confirmation => '!mp@st0');
+AdminUser.create(:email => 'taleeb@impas.to', :password => '!mp@st0', :password_confirmation => '!mp@st0');
+AdminUser.create(:email => 'derek@impas.to', :password => '!mp@st0', :password_confirmation => '!mp@st0');
+AdminUser.create(:email => 'anthony@impas.to', :password => '!mp@st0', :password_confirmation => '!mp@st0');
