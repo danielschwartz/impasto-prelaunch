@@ -51,7 +51,7 @@
 	</div>
 
 	<div class="user" id="user-box">
-		<h3 class="rooney">Enter Email</h3>
+		<h3 class="rooney">Enter Email (Required)</h3>
 		<%= form_for @prelaunch_subscriber, :url => { :action => "create" } do |f| %>
 			<div class="input-append">
 				<%= f.text_field :email, :class => "span4", :placeholder => "ex. name@exmaple.com" %>
