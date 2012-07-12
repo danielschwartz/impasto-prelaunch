@@ -89,6 +89,11 @@ $(document).ready(function(){
     artistBox.fadeOut(0);
     shareBox.fadeOut(0);
 
+    panel.fadeOut(0);
+    setTimeout(function(){
+        panel.fadeIn(500);
+    }, 250);
+
     // Form Submit
     userForm.submit(function(e){
         e.preventDefault();
