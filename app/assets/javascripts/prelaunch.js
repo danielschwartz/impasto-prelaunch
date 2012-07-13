@@ -1,3 +1,25 @@
+/* jQuery Tiny Pub/Sub - v0.7 - 10/27/2011
+ * http://benalman.com/
+ * Copyright (c) 2011 "Cowboy" Ben Alman; Licensed MIT, GPL */
+
+(function($) {
+
+  var o = $({});
+
+  $.subscribe = function() {
+    o.on.apply(o, arguments);
+  };
+
+  $.unsubscribe = function() {
+    o.off.apply(o, arguments);
+  };
+
+  $.publish = function() {
+    o.trigger.apply(o, arguments);
+  };
+
+}(jQuery));
+
 (function($){
     $.fn.toJSON = function(options){
         
@@ -90,9 +112,10 @@ $(document).ready(function(){
     shareBox.fadeOut(0);
 
     panel.fadeOut(0);
-    setTimeout(function(){
+
+    $.subscribe('fonts-loaded', function(){
         panel.fadeIn(500);
-    }, 250);
+    });
 
     // Form Submit
     userForm.submit(function(e){

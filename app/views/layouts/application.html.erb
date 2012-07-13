@@ -2,13 +2,22 @@
 <html>
 <head>
   <title>Impasto</title>
+  <%= csrf_meta_tags %>
   <%= stylesheet_link_tag    "reset", :media => "all" %>
   <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
   <%= stylesheet_link_tag    "prelaunch", :media => "all" %>
 
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js "></script>
+  <%= javascript_include_tag "prelaunch" %>
   <script type="text/javascript">
     WebFontConfig = {
-      typekit: { id:'kab7drn'}
+      typekit: { id:'kab7drn'},
+      active: function(){
+        $.publish('fonts-loaded');
+      },
+      inactive: function(){
+        $.publish('fonts-loaded');
+      }
     };
     (function() {
       var wf = document.createElement('script');
@@ -20,9 +29,6 @@
       s.parentNode.insertBefore(wf, s);
     })();
   </script>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js "></script>
-  <%= javascript_include_tag "prelaunch" %>
-  <%= csrf_meta_tags %>
 </head>
 <body>
 
