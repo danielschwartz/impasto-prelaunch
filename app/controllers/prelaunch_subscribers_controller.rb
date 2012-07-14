@@ -1,4 +1,6 @@
 class PrelaunchSubscribersController < ApplicationController
+
+  caches_page :new
   # GET /prelaunch_subscribers
   # GET /prelaunch_subscribers.json
   # def index
