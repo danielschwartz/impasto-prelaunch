@@ -32,6 +32,7 @@ gem 'activeadmin'
 gem 'sass-rails',   '~> 3.2.3'
 gem "meta_search",    '>= 1.1.0.pre'
 gem 'createsend'
+gem 'newrelic_rpm'
 
 
 # To use ActiveModel has_secure_password
