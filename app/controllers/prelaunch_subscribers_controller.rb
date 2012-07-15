@@ -28,6 +28,12 @@ class PrelaunchSubscribersController < ApplicationController
   def new
     @prelaunch_subscriber = PrelaunchSubscriber.new
 
+    # @subscriber_by_id = SubscriberService.getSubscriberById()
+
+    @temp = Kernel.const_get('SubscriberService').send('getSubscriberById');
+
+    logger.debug "#{@temp.inspect}"
+
     respond_to do |format|
       format.html # new.html.erb
     end
