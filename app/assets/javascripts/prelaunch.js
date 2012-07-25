@@ -125,7 +125,7 @@ $(document).ready(function(){
             if(json.success){
                 showShare();
             } else {
-                
+                panel.effect("shake", { times:3 }, 100);
             }
         });
     });
@@ -143,7 +143,7 @@ $(document).ready(function(){
             if(json.success){
                 showShare(true);
             } else {
-                
+                panel.effect("shake", { times:3 }, 100);
             }
         });
     });
@@ -164,8 +164,8 @@ $(document).ready(function(){
         introBox.fadeOut(500, function(){
 
             panel.animate({
-                height: 688,
-                'margin-top': -344
+                height: 748,
+                'margin-top': -399
             }, 500, function(){
                 artistBox.fadeIn(500);
             });
@@ -177,8 +177,8 @@ $(document).ready(function(){
         if(resize){
             artistBox.fadeOut(500, function(){
                 panel.animate({
-                    height: 300,
-                    'margin-top': -150
+                    height: 360,
+                    'margin-top': -205
                 }, 500, function(){
                     shareBox.fadeIn(500);
                 });

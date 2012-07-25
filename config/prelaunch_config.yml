@@ -1,15 +1,15 @@
 development:
   campaign_monitor_api_key: 0b16d196da5d0f3e532fb16a5e94d98d
-  campaign_monitor_artist_list_id: f2c3483e232dfff0cc48b2471b3be114
-  campaign_monitor_user_list_id: 54d49bfe508f8a71302b9c6a5b4e47ac
+  campaign_monitor_artist_list_id: 1b3bad643562d8f51d2b34a0e660f225
+  campaign_monitor_user_list_id: 0d73a637d9ff62b99b7f8c658e9e8bbc
   
 test:
   campaign_monitor_api_key: 0b16d196da5d0f3e532fb16a5e94d98d
-  campaign_monitor_artist_list_id: f2c3483e232dfff0cc48b2471b3be114
-  campaign_monitor_user_list_id: 54d49bfe508f8a71302b9c6a5b4e47ac
+  campaign_monitor_artist_list_id: 1b3bad643562d8f51d2b34a0e660f225
+  campaign_monitor_user_list_id: 0d73a637d9ff62b99b7f8c658e9e8bbc
 
 production:
   campaign_monitor_api_key: 0b16d196da5d0f3e532fb16a5e94d98d
-  campaign_monitor_artist_list_id: f2c3483e232dfff0cc48b2471b3be114
-  campaign_monitor_user_list_id: 54d49bfe508f8a71302b9c6a5b4e47ac
+  campaign_monitor_artist_list_id: 1b3bad643562d8f51d2b34a0e660f225
+  campaign_monitor_user_list_id: 0d73a637d9ff62b99b7f8c658e9e8bbc
   

@@ -48,12 +48,12 @@ form{
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	margin-top: -150px;
+	margin-top: -205px;
 	margin-left: -189px;
 	border-radius: 6px 6px 6px 6px;
 	width: 378px;
 
-	height: 300px;
+	height: 360px;
 }
 
 .panel h1{
@@ -150,6 +150,12 @@ form{
 	height: 44px;
 	font-size: 23px;
 	margin-top: 20px;
+}
+
+input.error{
+	color: #B94A48;
+	border-color: #B94A48;
+	border-size: 3px;
 }
 
 #prelaunch_subscriber_birthdate_2i, #prelaunch_subscriber_birthdate_1i{
