@@ -44,16 +44,14 @@ form{
 	box-shadow: 1px 1px 5px rgba(255,255,255,.5) inset;
 	border: 1px solid #334d54;
 	padding: 18px 15px 30px;
-
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	margin-top: -205px;
-	margin-left: -189px;
+	margin-top: -190px;
+	margin-left: -205px;
 	border-radius: 6px 6px 6px 6px;
 	width: 378px;
-
-	height: 360px;
+	height: 330px;
 }
 
 .panel h1{

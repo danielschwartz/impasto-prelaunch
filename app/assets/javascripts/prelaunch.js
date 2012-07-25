@@ -177,8 +177,8 @@ $(document).ready(function(){
         if(resize){
             artistBox.fadeOut(500, function(){
                 panel.animate({
-                    height: 360,
-                    'margin-top': -205
+                    height: 330,
+                    'margin-top': -190
                 }, 500, function(){
                     shareBox.fadeIn(500);
                 });
