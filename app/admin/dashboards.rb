@@ -16,7 +16,7 @@ ActiveAdmin::Dashboards.build do
   #   end
 
   section "Recent Artists" do 
-    table_for PrelaunchSubscriber.where(:artist => true) do
+    table_for PrelaunchSubscriber.where(:artist => true).limit(15).order("created_at DESC") do
       column ("Email") { |sub| link_to(sub.email, admin_prelaunch_subscriber_path(sub)) }
       column ("Name") { |sub|  sub.name }
       column ("Portfolio") { |sub| sub.portfolio }
@@ -26,7 +26,7 @@ ActiveAdmin::Dashboards.build do
   end
 
   section "Recent Collectors" do 
-    table_for PrelaunchSubscriber.where(:artist => false) do
+    table_for PrelaunchSubscriber.where(:artist => false).limit(15).order("created_at DESC") do
       column ("Email") { |sub| link_to(sub.email, admin_prelaunch_subscriber_path(sub)) }
       column ("Name") { |sub|  sub.name }
       column ("Time") { |sub|  sub.created_at }
