@@ -27,7 +27,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'activeadmin'
+gem 'activeadmin', :git => 'git://github.com/danielschwartz/active_admin.git'
 gem 'sass-rails',   '~> 3.2.3'
 gem "meta_search",    '>= 1.1.0.pre'
 gem 'createsend'
