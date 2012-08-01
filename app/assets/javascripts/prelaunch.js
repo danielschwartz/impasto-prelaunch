@@ -96,6 +96,7 @@
 })(jQuery);
 
 $(document).ready(function(){
+    mixpanel.track("Homepage View");
 
     var panel = $('#panel'),
         userButton = $('#user-button'),
@@ -124,7 +125,9 @@ $(document).ready(function(){
         $.post($(this).attr('action') + '.json', $(this).toJSON(), function(json){
             if(json.success){
                 showShare();
+                mixpanel.track("User Form Submit");
             } else {
+                mixpanel.track("User Form Submit - Error");
                 panel.effect("shake", { times:3 }, 100);
             }
         });
@@ -142,8 +145,10 @@ $(document).ready(function(){
         $.post($(this).attr('action') + '.json', form, function(json){
             if(json.success){
                 showShare(true);
+                mixpanel.track("Artist Form Submit");
             } else {
                 panel.effect("shake", { times:3 }, 100);
+                mixpanel.track("Artist Form Submit - Error");
             }
         });
     });
@@ -151,6 +156,7 @@ $(document).ready(function(){
 
     // Animations
     userButton.click(function(e){
+        mixpanel.track("User Form Open");
         e.preventDefault();
 
         introBox.fadeOut(500, function(){
@@ -159,6 +165,7 @@ $(document).ready(function(){
     });
 
     artistButton.click(function(e){
+        mixpanel.track("Artist Form Open");
         e.preventDefault();
 
         introBox.fadeOut(500, function(){
