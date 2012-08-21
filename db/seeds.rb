@@ -11,3 +11,4 @@ AdminUser.create(:email => 'daniel@impas.to', :password => '!mp@st0', :password_
 AdminUser.create(:email => 'taleeb@impas.to', :password => '!mp@st0', :password_confirmation => '!mp@st0');
 AdminUser.create(:email => 'derek@impas.to', :password => '!mp@st0', :password_confirmation => '!mp@st0');
 AdminUser.create(:email => 'anthony@impas.to', :password => '!mp@st0', :password_confirmation => '!mp@st0');
+AdminUser.create(:email => 'charles@impas.to', :password => '!mp@st0', :password_confirmation => '!mp@st0');
